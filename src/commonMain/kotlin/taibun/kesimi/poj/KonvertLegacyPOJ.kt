@@ -528,6 +528,7 @@ object KonvertLegacyPOJ {
         "ë" to "ē",         // U+00EB → e7
         "ç" to "e̍",        // U+00E7 → e8
         // Lowercase i: i7, i8
+        "……" to "……", // preserve Chinese ellipsis
         "„" to "ī",         // U+201E → i7
         "\u2026" to "i̍",   // U+2026 … → i8
         // Lowercase m: m2, m3, m5, m7, m8
@@ -623,6 +624,7 @@ object KonvertLegacyPOJ {
     )
 
     val hotsysFontHackToUnicodeMap = mapOf(
+        "……" to "……", // preserve Chinese ellipsis
         // Lowercase a
         "¡" to "á",         // U+00A1 → a2
         "\u2026" to "à",    // U+2026 … → a3

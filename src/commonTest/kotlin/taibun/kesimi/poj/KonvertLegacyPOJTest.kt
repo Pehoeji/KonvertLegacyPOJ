@@ -64,6 +64,10 @@ class KonvertLegacyPOJTest {
 
         // Contextual test: "h— 人" should become "hm̂ 人"
         assertEquals("hm̂ 人", KonvertLegacyPOJ.convertLegacyTpFontHackToUnicode("h\u2014 人"))
+
+        // Chinese ellipsis must be preserved, not converted
+        assertEquals("……", KonvertLegacyPOJ.convertLegacyTpFontHackToUnicode("……"))
+        assertEquals("話……", KonvertLegacyPOJ.convertLegacyTpFontHackToUnicode("話……"))
     }
 
     @Test
